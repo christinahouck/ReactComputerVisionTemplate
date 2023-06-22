@@ -1,6 +1,6 @@
 // Import dependencies
 import React, { useRef, useEffect, useCallback } from "react";
-// import * as tf from "@tensorflow/tfjs";
+import * as tf from "@tensorflow/tfjs";
 // 1. TODO - Import required model here
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import * as cocossd from "@tensorflow-models/coco-ssd";
@@ -11,6 +11,7 @@ import "./App.css";
 function App() {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
+    console.log(tf);
 
     const runCocoFunction = useCallback(() => {
         runCoco();
@@ -25,7 +26,7 @@ function App() {
         //  Loop and detect hands
         setInterval(() => {
             detect(net);
-        }, 100);
+        }, 200);
     };
 
     const detect = async (net) => {
