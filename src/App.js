@@ -12,6 +12,10 @@ function App() {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
 
+    const runCocoFunction = useCallback(() => {
+        runCoco();
+    }, []);
+
     // Main function
     const runCoco = async () => {
         // 3. TODO - Load network
@@ -59,8 +63,8 @@ function App() {
     };
 
     useEffect(() => {
-        runCoco();
-    }, [runCoco]);
+        runCocoFunction();
+    }, [runCocoFunction]);
 
     return (
         <div className="App">
