@@ -1,6 +1,6 @@
 // Import dependencies
 import React, { useRef, useEffect } from "react";
-import * as tf from "@tensorflow/tfjs";
+// import * as tf from "@tensorflow/tfjs";
 // 1. TODO - Import required model here
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import * as cocossd from "@tensorflow-models/coco-ssd";
@@ -21,7 +21,7 @@ function App() {
         //  Loop and detect hands
         setInterval(() => {
             detect(net);
-        }, 10);
+        }, 100);
     };
 
     const detect = async (net) => {
@@ -60,7 +60,7 @@ function App() {
 
     useEffect(() => {
         runCoco();
-    }, []);
+    }, [runCoco]);
 
     return (
         <div className="App">

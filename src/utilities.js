@@ -5,7 +5,8 @@ export const drawRect = (detections, ctx) => {
         const text = prediction["class"];
 
         // set styling
-        const color = "hotpink";
+        // const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        const color = "#5921D3";
         ctx.strokeStyle = color;
         ctx.font = "18px Arial";
         ctx.fillStyle = color;
